@@ -26,12 +26,12 @@
         <img src="./images/icon-star.svg" alt="star icon">
       </div>
       <form action="submit">
-        <!-- <fieldset> -->
         <h2>How did we do?</h2>
         <p>Please let us know how we did with your support request. All feedback is appreciated
           to help us improve our offering!</p>
         <div class="ratingChoices">
-          <input type="radio" name="number" value="1">
+          <!-- add a div to encase the input and labels so that the position relative can be on the parent -->
+          <input type="radio" name="number" value="1" required>
           <label for="ratingChoice1">1</label>
 
           <input type="radio" name="number" value="2">
@@ -46,21 +46,27 @@
           <input type="radio" name="number" value="5">
           <label for="ratingChoice5">5</label>
         </div>
-        <button type="submit">Submit</button>
-        <!-- </fieldset> -->
+        <div class="buttonContainer">
+          <button type="submit" title="Please choose a rating to submit!" disabled>Submit</button>
+        </div>
       </form>
     </div>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
     <div class="thankYou">
-      <img src="./images/illustration-thank-you.svg" alt="illustration of a completed transaction">
-      <div class="selection">
-        <p>You selected <!-- target.value --> out of 5</p>
+      <div class="thanksSection">
+        <div class="tyImgBox">
+          <img src="./images/illustration-thank-you.svg" alt="illustration of a completed transaction">
+        </div>
+
+        <div class="selection">
+          <p>You selected <span><!-- target.value --></span>out of 5</p>
+        </div>
+        <h2>Thank you!</h2>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!</p>
       </div>
-      <h2>Thank you!</h2>
-      <p>We appreciate you taking the time to give a rating. If you ever need more support,
-        don’t hesitate to get in touch!</p>
     </div>
     <!-- Thank you state end -->
 
@@ -69,8 +75,6 @@
       Coded by <a href="#">Chris Kim</a>
     </div>
   </section>
-
-
 
   <script src="app.js"></script>
 </body>

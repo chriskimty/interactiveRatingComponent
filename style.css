@@ -29,6 +29,7 @@ h2 {
 p {
     font-size: 15px;
     color: var(--mediumGrey);
+    line-height: 25px;
 }
 
 body {
@@ -42,7 +43,7 @@ body {
 .feature {
     width: 450px;
     margin: 0 auto;
-    height: 350px;
+    height: 400px;
     background-color: var(--darkBlue);
     align-self: center;
     position: relative;
@@ -56,6 +57,10 @@ body {
     padding: 25px;
 }
 
+.rating p {
+    margin-right: 23px;
+}
+
 .starContainer {
     background-color: var(--circleDB);
     padding: 12px;
@@ -65,9 +70,101 @@ body {
     border-radius: 50%;
 }
 
-/* change display w/ JS later */
+.ratingChoices {
+    text-align: center;
+}
+
+.ratingChoices input {
+    opacity: 0;
+    z-index: 1000;
+    position: relative;
+    margin: 30px;
+    transform: scale(3);
+    cursor: pointer;
+}
+
+.numContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.ratingChoices label {
+    position: absolute;
+    top: 56%;
+    margin-left: -65px;
+    color: var(--mediumGrey);
+    background-color: var(--circleDB);
+    padding: 15px 20px;
+    border-radius: 50%;   
+}
+
+.ratingChoices label:hover {
+    background-color: var(--orange);
+}
+
+.ratingChoices label:focus {
+    background-color: var(--orange);
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 90%;
+    margin-top: 30px;
+    font-family: Overpass;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+    letter-spacing: 3px;
+    transition: 0.3s;
+}
+
+button:disabled {
+    background-color:hsla(25, 97%, 53%, 0.471);
+    color:hsla(0, 0%, 100%, 0.677);
+    cursor: not-allowed;
+}
+
+button:active {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
 .thankYou {
     display: none;
+}
+
+.thanksSection {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+}
+
+.tyImgBox {
+    padding: 20px 0px;
+}
+
+.selection p {
+    color: var(--orange);
+    padding: 8px;
+    background-color: var(--circleDB);
+    border-radius: 25px;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.thanksSection h2 {
+    margin-bottom: 10px;
+    padding-top: 20px;
 }
 
 /* Attribution */
